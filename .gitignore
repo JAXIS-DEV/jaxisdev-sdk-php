@@ -1,5 +1,8 @@
 /vendor/
 composer.lock
+
+# Notas internas de build/release -- no forman parte del paquete publicado
+RELEASING.md
 .phpunit.cache/
 .phpunit.result.cache
 .DS_Store
