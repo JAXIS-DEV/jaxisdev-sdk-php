@@ -1,0 +1,33 @@
+{
+    "name": "jaxisdev/sdk-php",
+    "description": "Official Jaxis SDK for PHP - developer-first APIs for SMS, WhatsApp and Billing.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["jaxis", "sdk", "sms", "whatsapp", "messaging", "api", "billing", "php", "cognito"],
+    "authors": [
+        {
+            "name": "Jaxis Team"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jaxis\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jaxis\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    }
+}
