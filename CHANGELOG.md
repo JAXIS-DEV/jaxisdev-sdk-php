@@ -1,5 +1,9 @@
 # Changelog
 
+## Sin publicar
+
+- `whatsapp->checkNumber($phone)`: valida si un número tiene WhatsApp antes de mandarle una plantilla. Requiere que el tenant tenga la revisión de número habilitada, genera un costo por llamada.
+
 ## v1.0.1
 
 - Sin cambios de código. Release nuevo para forzar el re-crawl de Packagist (el tag `v1.0.0` no había quedado indexado).

@@ -62,4 +62,20 @@ class WhatsappModule
 
         return json_decode((string) $response->getBody(), true) ?? [];
     }
+
+    /**
+     * Valida si un numero tiene WhatsApp antes de mandarle una plantilla.
+     * Requiere que el tenant tenga la revision de numero habilitada
+     * (features.phoneCheckEnabled) -- genera un costo por cada llamada.
+     *
+     * @return array{numberExists: bool}
+     */
+    public function checkNumber(string $phone): array
+    {
+        $response = $this->client->request('POST', '/v2/svc/phone-check', [
+            'json' => ['phone' => $phone],
+        ]);
+
+        return json_decode((string) $response->getBody(), true) ?? [];
+    }
 }
