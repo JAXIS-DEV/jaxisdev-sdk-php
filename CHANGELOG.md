@@ -1,8 +1,17 @@
 # Changelog
 
-## Sin publicar
+## Sin publicar (siguiente: v1.1.0)
 
-- `whatsapp->checkNumber($phone)`: valida si un número tiene WhatsApp antes de mandarle una plantilla. Requiere que el tenant tenga la revisión de número habilitada, genera un costo por llamada.
+- `whatsapp->checkNumber($phone)`: valida si un número tiene WhatsApp antes de mandarle una plantilla. Genera un costo por llamada.
+- `whatsapp->send`/`whatsapp->sendBatch`: el endpoint interno cambió de
+  `/v2/svc/messages/whatsapp/batch` a `/v2/svc/messages/whatsapp` (se
+  quitó el sufijo `/batch` en el backend para que WhatsApp siga el mismo
+  patrón que `/v2/svc/messages/sms`). No es un cambio para quien consume
+  el SDK -- mismos parámetros, misma respuesta, solo cambió la URL
+  interna.
+- README: se documentó `whatsapp->checkNumber($phone)`, que ya estaba en
+  el código (desde `checkNumber`, 04720a9) pero nunca se agregó a la
+  tabla de la API Reference.
 
 ## v1.0.1
 

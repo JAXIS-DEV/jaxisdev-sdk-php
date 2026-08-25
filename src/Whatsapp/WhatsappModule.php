@@ -56,7 +56,7 @@ class WhatsappModule
         // /v2/svc/... -- rutas protegidas con el Lambda authorizer de tokens de
         // servicio (no el JWT nativo de Cognito), que es el modo de auth real
         // para el que esta pensado este SDK.
-        $response = $this->client->request('POST', '/v2/svc/messages/whatsapp/batch', [
+        $response = $this->client->request('POST', '/v2/svc/messages/whatsapp', [
             'json' => $params,
         ]);
 
@@ -65,8 +65,7 @@ class WhatsappModule
 
     /**
      * Valida si un numero tiene WhatsApp antes de mandarle una plantilla.
-     * Requiere que el tenant tenga la revision de numero habilitada
-     * (features.phoneCheckEnabled) -- genera un costo por cada llamada.
+     * Genera un costo por cada llamada (pricing.phoneCheck del tenant).
      *
      * @return array{numberExists: bool}
      */

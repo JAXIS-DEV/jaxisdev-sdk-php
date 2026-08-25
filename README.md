@@ -95,6 +95,7 @@ Gestionado internamente. También puedes disparar logins explícitos con `$jaxis
 
 - `$jaxis->whatsapp->send(['to' => ..., 'templateId' => ..., 'params' => [...]])`: envía una plantilla de WhatsApp a un destinatario.
 - `$jaxis->whatsapp->sendBatch(['destinations' => [...], 'templateId' => ..., ...])`: igual, para múltiples `destinations` en una sola llamada.
+- `$jaxis->whatsapp->checkNumber($phone)`: valida si un número tiene WhatsApp antes de mandarle una plantilla. Genera un costo por llamada.
 
 ---
 
