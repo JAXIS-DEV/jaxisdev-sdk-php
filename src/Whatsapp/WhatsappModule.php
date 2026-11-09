@@ -22,7 +22,8 @@ class WhatsappModule
      *   params?: array<string, string|int>,
      *   buttonValue?: string,
      *   headerMedia?: array{type: string, url: string, filename?: string},
-     *   imageUrl?: string
+     *   imageUrl?: string,
+     *   subTenantId?: string
      * } $params
      */
     public function send(array $params): array
@@ -48,7 +49,8 @@ class WhatsappModule
      *   params?: array<string, string|int>,
      *   buttonValue?: string,
      *   headerMedia?: array{type: string, url: string, filename?: string},
-     *   imageUrl?: string
+     *   imageUrl?: string,
+     *   subTenantId?: string
      * } $params
      */
     public function sendBatch(array $params): array

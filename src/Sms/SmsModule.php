@@ -15,7 +15,7 @@ class SmsModule
     }
 
     /**
-     * @param array{to: string|string[], text: string} $params
+     * @param array{to: string|string[], text: string, subTenantId?: string} $params
      */
     public function send(array $params): array
     {
@@ -32,7 +32,7 @@ class SmsModule
             'json' => [
                 'destinations' => $destinations,
                 'text' => $params['text'] ?? null,
-            ],
+            ] + (!empty($params['subTenantId']) ? ['subTenantId' => $params['subTenantId']] : []),
         ]);
 
         return json_decode((string) $response->getBody(), true) ?? [];

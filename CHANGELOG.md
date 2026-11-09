@@ -2,6 +2,8 @@
 
 ## Sin publicar (siguiente: v1.1.0)
 
+- `subTenantId` opcional en `sms->send`, `whatsapp->send` y `whatsapp->sendBatch`: envía a nombre de un subtenant del tenant del token. Sin él, todo igual que antes.
+
 - `whatsapp->checkNumber($phone)`: valida si un número tiene WhatsApp antes de mandarle una plantilla. Genera un costo por llamada.
 - `whatsapp->send`/`whatsapp->sendBatch`: el endpoint interno cambió de
   `/v2/svc/messages/whatsapp/batch` a `/v2/svc/messages/whatsapp` (se
